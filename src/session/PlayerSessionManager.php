@@ -13,9 +13,10 @@ class PlayerSessionManager{
 	public function __construct(){
 	}
 
-	public function getSession(Player $player) : ?PlayerSession{
-		if (isset($this->sessions[$player->getName()])){
-			return $this->sessions[$player->getName()];
+	public function getSession(Player|string $player) : ?PlayerSession{
+		if ($player instanceof Player) $player = $player->getName();
+		if (isset($this->sessions[$player])){
+			return $this->sessions[$player];
 		}
 		return null;
 	}
@@ -32,6 +33,15 @@ class PlayerSessionManager{
 			$this->sessions[$player->getName()] = $session;
 		} else {
 			throw new RuntimeException("Trying to overwrite already existing PlayerSession");
+		}
+	}
+
+	public function removeSession(Player|PlayerSession|string $player) : void{
+		if ($player instanceof Player) $player = $player->getName();
+		if ($player instanceof PlayerSession) $player = $player->getPlayer()->getName();
+
+		if ($this->getSession($player) !== null){
+			unset($this->sessions[$player]);
 		}
 	}
 }
