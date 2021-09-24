@@ -7,7 +7,6 @@ use RuntimeException;
 use pocketmine\player\Player;
 
 class PlayerSessionManager{
-
 	/** @var PlayerSession[] */
 	protected array $sessions = [];
 
