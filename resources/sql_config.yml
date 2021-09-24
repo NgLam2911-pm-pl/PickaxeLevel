@@ -1,0 +1,7 @@
+database:
+  type: sqlite #Only Sqlite is support now !
+  sqlite:
+    # The file name of the database in the plugin data folder.
+    file: level.sqlite
+  # Recommended: 1 for sqlite.
+  worker-limit: 1
