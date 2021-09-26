@@ -25,6 +25,4 @@ class YamlProvider{
 		return $this->sql_config->getAll();
 	}
 
-	//TODO: SqliteProvider
-
 }
