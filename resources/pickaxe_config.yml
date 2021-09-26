@@ -1,0 +1,69 @@
+pickaxe:
+  name: "Pickaxe Level"
+  lore: "Break block and let it level up !"
+type:
+  - 270 #Wooden Pickaxe
+  - 274 #Stone Pickaxe
+  - 257 #Iron Pickaxe
+  - 278 #Diamond Pickaxe
+level:
+  max-level: 10
+  max-exp:
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500
+    6: 700
+    7: 900
+    8: 1000
+    10: 2000
+  reward:
+    1: #Level
+      money: 1000 #Use this if you have enabled EconomyAPI
+      upgrade: true #Upgrade pickaxe to next pickaxe type
+      reset-enchants: true #Delete all old enchants in pickaxe
+    2:
+      enchants:
+        - id: "efficiency"
+          level: 1 #If pickaxe already have efficiency I, it will be upgraded to efficiency II depend on levels
+    3:
+      money: 1000
+      upgrade: true
+      reset-enchants: true
+    4:
+      enchants:
+        - id: "efficiency"
+          level: 1
+    5:
+      money: 1000
+      upgrade: true
+      reset-enchants: true
+    # You can leave reward nothing (For example: level 6)
+    7:
+      money: 1000
+      enchants:
+        - id: "efficiency"
+          level: 1
+        - id: "fortune"
+          level: 1
+    8:
+      money: 2000
+      enchants:
+        - id: "efficiency"
+          level: 1
+        - id: "fortune"
+          level: 1
+    9:
+      money: 5000
+      enchants:
+        - id: "efficiency"
+          level: 1
+    10:
+      money: 10000
+      enchants:
+        - id: "efficiency"
+          level: 1
+        - id: "fortune"
+          level: 1
+

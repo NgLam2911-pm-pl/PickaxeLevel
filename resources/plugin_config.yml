@@ -1,0 +1,14 @@
+#Pickaxe Level Config.
+
+# Plugin Setting
+lang: eng
+custom-enchants: false #Allow CustomEnchants (Make sure you have PiggyCustomEnchants plugin)
+economy-api: true #Allow EconomyAPI feature (Make sure you have EconomyAPI)
+popup: false #Show popup when exp updated
+popup-msg: "Level: {LEVEL} | EXP: {CURRENT_EXP}/{MAX_EXP}"
+upgrade-broadcast: false
+broadcast-message: "Player {NAME} have upgraded their pickaxe to level {LEVEL} !"
+
+
+
+
