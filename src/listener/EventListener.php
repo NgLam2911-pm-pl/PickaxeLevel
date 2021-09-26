@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace PickaxeLevel\listener;
 
 use PickaxeLevel\Loader;
-use PickaxeLevel\session\PlayerSession;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;

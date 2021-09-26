@@ -19,11 +19,11 @@ class Loader extends PluginBase{
 		//TODO: Alot of thing...
 	}
 
-	public function getSessionManager() : PlayerSessionManager{
+	public final function getSessionManager() : PlayerSessionManager{
 		return $this->sessionManager;
 	}
 
-	public function getProvider() : Provider{
+	public final function getProvider() : Provider{
 		return $this->provider;
 	}
 }

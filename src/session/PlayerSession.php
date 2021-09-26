@@ -8,12 +8,12 @@ use pocketmine\player\Player;
 class PlayerSession{
 
 	protected Player $player;
-	protected int $xp;
+	protected int $exp;
 	protected int $level;
 
-	public function __construct(Player $player, int $xp = 0, int $level = 0){
+	public function __construct(Player $player, int $exp = 0, int $level = 0){
 		$this->player = $player;
-		$this->xp = $xp;
+		$this->exp = $exp;
 		$this->level = $level;
 	}
 
@@ -21,24 +21,24 @@ class PlayerSession{
 		return $this->player;
 	}
 
-	public function getXp() : int{
-		return $this->xp;
+	public function getExp() : int{
+		return $this->exp;
 	}
 
 	public function getLevel() : int{
 		return $this->level;
 	}
 
-	public function setXp(int $xp) : void{
-		$this->xp = $xp;
+	public function setExp(int $xp) : void{
+		$this->exp = $xp;
 	}
 
 	public function setLevel(int $level) : void{
 		$this->level = $level;
 	}
 
-	public function addXp(int $xp) : void{
-		$this->setXp($this->getXp() + $xp);
+	public function addExp(int $xp) : void{
+		$this->setExp($this->getExp() + $xp);
 	}
 
 	public function addLevel(int $level) : void{
@@ -46,7 +46,7 @@ class PlayerSession{
 	}
 
 	public function upgrade() : void{
-		$this->setXp(0);
+		$this->setExp(0);
 		$this->addLevel(1);
 	}
 }
