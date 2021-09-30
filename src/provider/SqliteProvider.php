@@ -6,6 +6,7 @@ namespace PickaxeLevel\provider;
 use Generator;
 use PickaxeLevel\Loader;
 use PickaxeLevel\session\PlayerSession;
+use PickaxeLevel\utils\SqlConfigDataParser;
 use pocketmine\player\Player;
 use poggit\libasynql\DataConnector;
 use poggit\libasynql\libasynql;
@@ -38,7 +39,8 @@ class SqliteProvider{
 	}
 
 	public function init() : void{
-		$this->database = libasynql::create($this->getLoader(), $this->getLoader()->getProvider()->getYamlProvider()->getSqlConfigData(), [
+		$parser = new SqlConfigDataParser($this->getLoader()->getProvider()->getYamlProvider()->getSqlConfigData());
+		$this->database = libasynql::create($this->getLoader(), $parser->getDBConfig(), [
 			"sqlite", "sqlite.sql"
 		]);
 
