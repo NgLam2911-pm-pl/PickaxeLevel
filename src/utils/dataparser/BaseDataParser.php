@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace PickaxeLevel\utils;
+namespace PickaxeLevel\utils\dataparser;
 
-class SqlConfigDataParser{
+abstract class BaseDataParser{
 
 	protected array $data;
 
@@ -11,7 +11,7 @@ class SqlConfigDataParser{
 		$this->data = $data;
 	}
 
-	public function getDBConfig() : array{
-		return $this->data["database"];
+	public function getData() : array{
+		return $this->data;
 	}
 }
